@@ -14,6 +14,11 @@
 		ACFCB12422BE0E66007DF927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB12222BE0E66007DF927 /* LaunchScreen.storyboard */; };
 		ACFCB12F22BE0E66007DF927 /* SlideshowAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB12E22BE0E66007DF927 /* SlideshowAppTests.swift */; };
 		ACFCB13A22BE0E66007DF927 /* SlideshowAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB13922BE0E66007DF927 /* SlideshowAppUITests.swift */; };
+		ACFCB14822BE0EF8007DF927 /* pickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB14722BE0EF8007DF927 /* pickViewController.swift */; };
+		ACFCB14A22BE1014007DF927 /* IMG_0966.JPG in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB14922BE1014007DF927 /* IMG_0966.JPG */; };
+		ACFCB14C22BE101F007DF927 /* fukuro.JPG in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB14B22BE101F007DF927 /* fukuro.JPG */; };
+		ACFCB14E22BE1024007DF927 /* jeans.JPG in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB14D22BE1024007DF927 /* jeans.JPG */; };
+		ACFCB15022BE102A007DF927 /* canon.JPG in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB14F22BE102A007DF927 /* canon.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		ACFCB13522BE0E66007DF927 /* SlideshowAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideshowAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCB13922BE0E66007DF927 /* SlideshowAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideshowAppUITests.swift; sourceTree = "<group>"; };
 		ACFCB13B22BE0E66007DF927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFCB14722BE0EF8007DF927 /* pickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickViewController.swift; sourceTree = "<group>"; };
+		ACFCB14922BE1014007DF927 /* IMG_0966.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0966.JPG; sourceTree = "<group>"; };
+		ACFCB14B22BE101F007DF927 /* fukuro.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fukuro.JPG; sourceTree = "<group>"; };
+		ACFCB14D22BE1024007DF927 /* jeans.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeans.JPG; sourceTree = "<group>"; };
+		ACFCB14F22BE102A007DF927 /* canon.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = canon.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,17 @@
 		ACFCB11822BE0E65007DF927 /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACFCB14922BE1014007DF927 /* IMG_0966.JPG */,
+				ACFCB14B22BE101F007DF927 /* fukuro.JPG */,
+				ACFCB14D22BE1024007DF927 /* jeans.JPG */,
+				ACFCB14F22BE102A007DF927 /* canon.JPG */,
 				ACFCB11922BE0E65007DF927 /* AppDelegate.swift */,
 				ACFCB11B22BE0E65007DF927 /* ViewController.swift */,
 				ACFCB11D22BE0E65007DF927 /* Main.storyboard */,
 				ACFCB12022BE0E66007DF927 /* Assets.xcassets */,
 				ACFCB12222BE0E66007DF927 /* LaunchScreen.storyboard */,
 				ACFCB12522BE0E66007DF927 /* Info.plist */,
+				ACFCB14722BE0EF8007DF927 /* pickViewController.swift */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -229,7 +244,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFCB15022BE102A007DF927 /* canon.JPG in Resources */,
+				ACFCB14A22BE1014007DF927 /* IMG_0966.JPG in Resources */,
+				ACFCB14C22BE101F007DF927 /* fukuro.JPG in Resources */,
 				ACFCB12422BE0E66007DF927 /* LaunchScreen.storyboard in Resources */,
+				ACFCB14E22BE1024007DF927 /* jeans.JPG in Resources */,
 				ACFCB12122BE0E66007DF927 /* Assets.xcassets in Resources */,
 				ACFCB11F22BE0E65007DF927 /* Main.storyboard in Resources */,
 			);
@@ -258,6 +277,7 @@
 			files = (
 				ACFCB11C22BE0E65007DF927 /* ViewController.swift in Sources */,
 				ACFCB11A22BE0E65007DF927 /* AppDelegate.swift in Sources */,
+				ACFCB14822BE0EF8007DF927 /* pickViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
