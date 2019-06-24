@@ -42,6 +42,8 @@
                                 </constraints>
                                 <state key="normal" title="進む"/>
                                 <connections>
+                                    <action selector="saiseiteishi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLZ-7H-Spj"/>
+                                    <action selector="susumu2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R2J-mH-wIZ"/>
                                     <action selector="susumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O1b-iK-0B7"/>
                                 </connections>
                             </button>
@@ -72,7 +74,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="modoru" destination="gd4-25-ec5" id="HGj-9r-we1"/>
                         <outlet property="slideView" destination="FEb-lg-8Zw" id="Vdg-T8-wBr"/>
+                        <outlet property="susumu" destination="qzf-bL-77F" id="iAO-xN-phL"/>
                         <segue destination="IZl-KE-1ae" kind="show" identifier="kakudai" id="E5s-JQ-Ato"/>
                     </connections>
                 </viewController>

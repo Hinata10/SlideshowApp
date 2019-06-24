@@ -19,20 +19,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func susumu(_ sender: Any) {
+//        if self.timer != nil{
+//            let tar = sender as! UIButton
+//            tar.isEnabled = false
+//        }
+        susumu.isEnabled = true
         imageNo += 1
         if imageNo > 3{
             imageNo = 0
         }
         slideView.image = UIImage(named: imageNameArray[imageNo])
     }
+    @IBOutlet weak var susumu: UIButton!
     @IBAction func modoru(_ sender: Any) {
+        modoru.isEnabled = true
         imageNo -= 1
         if imageNo < 0{
             imageNo = 3
         }
         slideView.image = UIImage(named: imageNameArray[imageNo])
     }
-   //画像につける番号と画像データ配列を宣言する。
+    @IBOutlet weak var modoru: UIButton!
+    //画像につける番号と画像データ配列を宣言する。
     var imageNo = 0
     let imageNameArray = [
         "IMG_0966", "fukuro", "jeans", "canon"]
@@ -52,24 +60,22 @@ class ViewController: UIViewController {
     var isPlaying = false
     //再生停止ボタン
     @IBAction func saiseiteishi(_ sender: Any) {
-//            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
-        //上記の文のみだと押したらs押しただけタイマーが作動し、複数のタイマーが存在してしまう。
+        //上記の文のみだと押したら押しただけタイマーが作動し、複数のタイマーが存在してしまう。
         if self.timer == nil{
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             //動作中のタイマーを一つに限定するためnilの時だけタイマーが動くようにする。
+            susumu.isEnabled = false
+            modoru.isEnabled = false
         }else if timer != nil{
             self.timer.invalidate()  //タイマーを停止するメソッド
             self.timer = nil  //timer == nilで認識できるようnilにしておく。
             self.timer_sec = 0  //一応ゼロにしとく。
+            susumu.isEnabled = true
+            modoru.isEnabled = true
         }
     }
     //prepareを使って画像を渡す。
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        //        if segue.identifier == "kakudai"{
-        //            let pickViewController:PickViewController = segue.destination as! PickViewController
-        ////            NextViewController.xy = textfield.text!
-        //            pickViewController.img = slideView.image!
-        //        }
         let Pick:pickViewController = segue.destination as! pickViewController
         //imageNoだけでどの画像かを渡す事ができるので、
         //遷移元のimageNoと遷移先のimageNoをPickとしてリンクさせる。
@@ -79,7 +85,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         slideView.image = UIImage(named: imageNameArray[imageNo])
-        //        timer = Timer.scheduledTimer(withTimeInterval: 1.0, selector: ////#selector(onTimer(_timer: Timer)), userInfo: nil, repeats: true)
+        
     }
     @IBAction func back(_ segue: UIStoryboardSegue){
         
