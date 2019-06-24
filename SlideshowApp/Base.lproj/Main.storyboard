@@ -42,8 +42,6 @@
                                 </constraints>
                                 <state key="normal" title="進む"/>
                                 <connections>
-                                    <action selector="saiseiteishi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLZ-7H-Spj"/>
-                                    <action selector="susumu2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R2J-mH-wIZ"/>
                                     <action selector="susumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O1b-iK-0B7"/>
                                 </connections>
                             </button>

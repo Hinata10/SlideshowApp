@@ -19,10 +19,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func susumu(_ sender: Any) {
-//        if self.timer != nil{
-//            let tar = sender as! UIButton
-//            tar.isEnabled = false
-//        }
         susumu.isEnabled = true
         imageNo += 1
         if imageNo > 3{
