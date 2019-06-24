@@ -40,19 +40,30 @@ class ViewController: UIViewController {
     var timer: Timer!
     //タイマー用の時間の変数
     var timer_sec: Float = 0
-    //
+    //スライドショーの進行
     @objc func updateTimer(_ timer: Timer){
-        self.timer_sec += 2.0
-    }
-    //再生停止ボタン
-    @IBAction func saiseiteishi(_ sender: Any) {
-        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
-        imageNo += 1
-        if imageNo < 3{
+        if imageNo > 2{
             imageNo = 0
+        }else{
+            imageNo += 1
         }
         slideView.image = UIImage(named: imageNameArray[imageNo])
     }
+    var isPlaying = false
+    //再生停止ボタン
+    @IBAction func saiseiteishi(_ sender: Any) {
+//            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+        //上記の文のみだと押したらs押しただけタイマーが作動し、複数のタイマーが存在してしまう。
+        if self.timer == nil{
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            //動作中のタイマーを一つに限定するためnilの時だけタイマーが動くようにする。
+        }else if timer != nil{
+            self.timer.invalidate()  //タイマーを停止するメソッド
+            self.timer = nil  //timer == nilで認識できるようnilにしておく。
+            self.timer_sec = 0  //一応ゼロにしとく。
+        }
+    }
+    //prepareを使って画像を渡す。
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         //        if segue.identifier == "kakudai"{
         //            let pickViewController:PickViewController = segue.destination as! PickViewController
@@ -73,11 +84,7 @@ class ViewController: UIViewController {
     @IBAction func back(_ segue: UIStoryboardSegue){
         
     }
-    //    @objc func onTimer(_timer: Timer){
-    //        print("Timer")
-    //        imageNo += 1
-    //        displayImage()
-    //    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC27FDBF22BF7A3C00EBC077 /* toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27FDBE22BF7A3C00EBC077 /* toggle.swift */; };
 		ACFCB11A22BE0E65007DF927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB11922BE0E65007DF927 /* AppDelegate.swift */; };
 		ACFCB11C22BE0E65007DF927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCB11B22BE0E65007DF927 /* ViewController.swift */; };
 		ACFCB11F22BE0E65007DF927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCB11D22BE0E65007DF927 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC27FDBE22BF7A3C00EBC077 /* toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggle.swift; sourceTree = "<group>"; };
 		ACFCB11622BE0E65007DF927 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCB11922BE0E65007DF927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFCB11B22BE0E65007DF927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC27FDBD22BF79FC00EBC077 /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				AC27FDBE22BF7A3C00EBC077 /* toggle.swift */,
+			);
+			path = SubClass;
+			sourceTree = "<group>";
+		};
 		ACFCB10D22BE0E65007DF927 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		ACFCB11822BE0E65007DF927 /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC27FDBD22BF79FC00EBC077 /* SubClass */,
 				ACFCB14922BE1014007DF927 /* IMG_0966.JPG */,
 				ACFCB14B22BE101F007DF927 /* fukuro.JPG */,
 				ACFCB14D22BE1024007DF927 /* jeans.JPG */,
@@ -276,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFCB11C22BE0E65007DF927 /* ViewController.swift in Sources */,
+				AC27FDBF22BF7A3C00EBC077 /* toggle.swift in Sources */,
 				ACFCB11A22BE0E65007DF927 /* AppDelegate.swift in Sources */,
 				ACFCB14822BE0EF8007DF927 /* pickViewController.swift in Sources */,
 			);
